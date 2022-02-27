@@ -68,7 +68,7 @@ func sendMail(mail *Mail) error{
 
 func BuildMessage(mail *Mail) string {
 	msg := "MIME-version: 1.0;\nContent-Type: text/html; charset=\"UTF-8\";\r\n"
-	msg += fmt.Sprintf("From: %s\r\n", "nexcyb.noreply@nexcyb.com")
+	msg += fmt.Sprintf("From: %s\r\n", "email@email.com")
 	msg += fmt.Sprintf("To: %s\r\n", strings.Join(mail.To, ";"))
 	msg += fmt.Sprintf("Subject: %s\r\n", mail.Subject)
 	msg += fmt.Sprintf("\r\n%s\r\n", mail.Body)
