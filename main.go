@@ -1,18 +1,16 @@
 package main
 
 import (
-	"emailMS/EmailService"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"os"
+	"simple-http-to-email-service/EmailService"
 )
 
-
-
-func main()  {
+func main() {
 	var err error
-	EmailService.GlobalConfig, err =EmailService.ReadConfig()
-	if err!=nil{
+	EmailService.GlobalConfig, err = EmailService.ReadConfig()
+	if err != nil {
 		os.Exit(-1)
 		fmt.Println("Service exiting because of lack of configuration")
 	}
